@@ -1,0 +1,15 @@
+events {
+  worker_connections 4096;
+}
+
+http {
+  server {
+    listen {{ LISTEN }};
+    server_name {{ SERVER_NAME }};
+
+    location {{ LOCATION }} {
+      root {{ ROOT }};
+      index {{ INDEX }};
+    }
+  }
+}
